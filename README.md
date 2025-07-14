@@ -5,6 +5,7 @@
 
 ## 1st processing idea
 
+```
 FOR each frame pair (F₁, F₂):
     1. grayscale(F₁), grayscale(F₂)
     2. flow = optical_flow(F₁ → F₂)
@@ -17,4 +18,4 @@ FOR each frame pair (F₁, F₂):
     9. residual = F₂' - F̂₂
     10. final = blend(F̂₂, F₂', residual, motion_mask, sharpness_map)
     11. output(final)
-
+```
