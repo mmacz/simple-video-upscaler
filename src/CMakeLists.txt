@@ -7,6 +7,8 @@ target_include_directories(pixel_vectors
 )
 target_link_libraries(pixel_vectors
   PRIVATE
-    opencv::opencv
     ProgramOptions
+    FrameGenerator
+    opencv::opencv
 )
+

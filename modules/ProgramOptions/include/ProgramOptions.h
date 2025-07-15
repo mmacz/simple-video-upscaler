@@ -1,11 +1,12 @@
 #pragma once
 
 #include <string>
+#include <cstdint>
 
 struct ProgramOptions {
   std::string inputFilePath;
   std::string outputFilePath;
-  float scaleFactor;
+  int32_t insertCount;
 };
 
 class ProgramOptionsParser {

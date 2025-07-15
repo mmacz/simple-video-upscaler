@@ -16,8 +16,8 @@ const ProgramOptions ProgramOptionsParser::parse(int argc, char **argv) {
 
     options.add_options()
         ("i,input", "Input file path", cxxopts::value<std::string>())
-        ( "o,output", "Output file path", cxxopts::value<std::string>())
-        ( "s,scale", "Scale factor", cxxopts::value<float>()->default_value("1.0"))
+        ("o,output", "Output file path", cxxopts::value<std::string>())
+        ("in,insert", "Frames to insert", cxxopts::value<int32_t>()->default_value("2"))
         ("h,help", "Print usage");
 
     auto result = options.parse(argc, argv);
@@ -29,7 +29,7 @@ const ProgramOptions ProgramOptionsParser::parse(int argc, char **argv) {
     ProgramOptions po;
     po.inputFilePath = result["input"].as<std::string>();
     po.outputFilePath = result["output"].as<std::string>();
-    po.scaleFactor = result["scale"].as<float>();
+    po.insertCount = result["insert"].as<int32_t>();
 
     if (po.inputFilePath.empty() || po.outputFilePath.empty()) {
       throw std::runtime_error(
