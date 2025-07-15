@@ -24,7 +24,7 @@ class PixelVectors(ConanFile):
         tc.variables["CMAKE_CXX_STANDARD"] = 17
         tc.variables["CMAKE_CXX_STANDARD_REQUIRED"] = True
         tc.variables["CMAKE_CXX_EXTENSIONS"] = False
-        tc.variables["EXPORT_COMPILE_COMMANDS"] = True
+        tc.variables["CMAKE_EXPORT_COMPILE_COMMANDS"] = True
         tc.generate()
 
         ts = CMakeDeps(self)

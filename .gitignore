@@ -2,4 +2,6 @@
 build/
 CMakeUserPresets.json
 .nvim-conan.json
+.cache/
+compile_commands.json
 

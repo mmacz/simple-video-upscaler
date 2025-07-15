@@ -6,5 +6,6 @@ enable_testing()
 find_package(cxxopts REQUIRED)
 find_package(opencv REQUIRED)
 
+add_subdirectory(modules)
 add_subdirectory(src)
 

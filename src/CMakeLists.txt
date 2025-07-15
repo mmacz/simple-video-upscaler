@@ -7,6 +7,6 @@ target_include_directories(pixel_vectors
 )
 target_link_libraries(pixel_vectors
   PRIVATE
-    cxxopts::cxxopts
     opencv::opencv
+    ProgramOptions
 )
