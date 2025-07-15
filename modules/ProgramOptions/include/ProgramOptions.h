@@ -10,11 +10,9 @@ struct ProgramOptions {
 
 class ProgramOptionsParser {
 public:
-    ProgramOptionsParser(int argc, char** argv);
+    ProgramOptionsParser();
     ~ProgramOptionsParser();
 
-    const ProgramOptions& getOptions() const;
-private:
-  ProgramOptions _options;
+    const ProgramOptions parse(int argc, char **argv);
 };
 
